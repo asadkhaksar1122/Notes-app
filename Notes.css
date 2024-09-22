@@ -7,6 +7,10 @@
   margin-right: auto;
   height: 130px;
 }
+.searchchange {
+  background-color: yellow; /* Change this to your desired highlight color */
+  color: red; /* Change this to your desired text color */
+}
 #title {
   width: 80%;
   margin-left: auto;

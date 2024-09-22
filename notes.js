@@ -35,7 +35,7 @@ notesbtn.addEventListener("click", function () {
     saveNotes(); // Save notes to localStorage
     show();
     textarea.value = "";
-    title.value="";
+    title.value = "";
     alert.innerHTML = `
       <div class="alert alert-success alert-dismissible fade show" role="alert">
         <strong>Added</strong> The note has been added
@@ -160,19 +160,20 @@ let cardbody = document.getElementsByClassName("card-body");
 search.addEventListener("input", () => {
   const searchTerm = search.value.toLowerCase();
   Array.from(cardTexts).forEach((cardText, index) => {
-    console.log(cardText);
-    const cardTextContent = cardText.innerText.toLowerCase();
+    const cardTextContent = cardText.innerText;
     const cardTitle = cardTitles[index]; // Assuming cardTitles is a NodeList of card title elements
-    const cardTitleContent = cardTitle.innerText.toLowerCase();
+    const cardTitleContent = cardTitle.innerText;
 
-    let textMatch = cardTextContent.includes(searchTerm);
-    let titleMatch = cardTitleContent.includes(searchTerm);
+    const regex = new RegExp(searchTerm, "gi");
+
+    let textMatch = cardTextContent.toLowerCase().includes(searchTerm);
+    let titleMatch = cardTitleContent.toLowerCase().includes(searchTerm);
 
     if (textMatch || titleMatch) {
       if (textMatch) {
         let newText = cardTextContent.replace(
-          new RegExp(searchTerm, "g"),
-          `<span class="searchchange">${searchTerm}</span>`
+          regex,
+          (match) => `<span class="searchchange">${match}</span>`
         );
         cardText.innerHTML = newText;
       } else {
@@ -181,8 +182,8 @@ search.addEventListener("input", () => {
 
       if (titleMatch) {
         let newTitle = cardTitleContent.replace(
-          new RegExp(searchTerm, "g"),
-          `<span class="searchchange">${searchTerm}</span>`
+          regex,
+          (match) => `<span class="searchchange">${match}</span>`
         );
         cardTitle.innerHTML = newTitle;
       } else {
@@ -197,7 +198,6 @@ search.addEventListener("input", () => {
     }
   });
 });
-
 let clear = document.getElementById("clear");
 clear.addEventListener("click", function () {
   textarea.value = "";
