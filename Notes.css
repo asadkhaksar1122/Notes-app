@@ -1,37 +1,42 @@
-.mainheading{
-    text-align: center;
+.mainheading {
+  text-align: center;
 }
-#notesarea{
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    height: 130px;
+#notesarea {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 130px;
 }
-#btnnotes{
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
+#title {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
-.button{
-    display: inline-block;
-    margin-right: 5px;
-    margin-top: 45px;
+#btnnotes {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
 }
-.card{
-   flex-grow: 1;
-   margin-left: 10px;
+.button {
+  display: inline-block;
+  margin-right: 5px;
+  margin-top: 45px;
 }
-.notesadd{
-    margin-top: 78px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.card {
+  flex-grow: 1;
+  margin-left: 10px;
 }
-.searchchange{
-    background-color: yellow;
+.notesadd {
+  margin-top: 78px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-@media (max-width:450px){
-    #notesarea{
-        width: 95%;
-    }
+.searchchange {
+  background-color: yellow;
+}
+@media (max-width: 450px) {
+  #notesarea {
+    width: 95%;
+  }
 }
