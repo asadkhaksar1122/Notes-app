@@ -15,8 +15,8 @@ function show() {
           <h5 class="card-title">Notes ${index + 1}</h5>
           <div class="edit"></div>
           <p class="card-text" id="${index}">${element}</p>
-          <button type="button" class="btn btn-secondary" style="font-size: 21px;" id="${index}">Edit</button>
-          <button type="button" class="btn btn-danger" style="font-size: 21px;" class="${index}" onclick="deletenote(${index})">Delete</button>
+          <button type="button" class="btn  btn-secondary"  id="${index}">Edit</button>
+          <button type="button" class="btn btn-danger"  class="${index}" onclick="deletenote(${index})">Delete</button>
         </div>
       </div>
     `;
@@ -50,7 +50,7 @@ notesadd.addEventListener("click", function (event) {
   if (event.target.innerHTML == "Edit") {
     let parent = event.target.parentElement;
     let p = parent.querySelector("p");
-    p.innerHTML = `<textarea cols="8" class="form-control" rows="7">${p.innerHTML}</textarea>`;
+    p.innerHTML = `<textarea cols="8" class="form-control" rows="7">${p.innerText}</textarea>`;
     let button = parent.querySelectorAll("button");
     let edit = parent.getElementsByClassName("edit")[0];
     edit.innerText = "Click the text to edit";
@@ -108,14 +108,14 @@ smallbtn.addEventListener("click", function () {
 let firstletter = document.getElementById("firstletter");
 
 firstletter.addEventListener("click", function () {
-  let valuearr=textarea.value.split(" ")
-let updatedarr=  valuearr.map((element)=>{
-    let firstLetter=element.charAt(0).toUpperCase()
-    element=firstLetter+element.slice(1).toLowerCase()
-    return element
-  })
-  textarea.value=updatedarr.join(" ")
-})
+  let valuearr = textarea.value.split(" ");
+  let updatedarr = valuearr.map((element) => {
+    let firstLetter = element.charAt(0).toUpperCase();
+    element = firstLetter + element.slice(1).toLowerCase();
+    return element;
+  });
+  textarea.value = updatedarr.join(" ");
+});
 
 let mainheading = document.getElementsByClassName("mainheading")[0];
 let textareadiv = document.getElementsByClassName("textareadiv")[0];
