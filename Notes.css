@@ -39,6 +39,89 @@
 .searchchange {
   background-color: yellow;
 }
+.app {
+  min-height: 100vh;
+}
+.footer {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.connect-title {
+  font-size: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.portfolio-link {
+  color: white;
+  transition: color 0.3s, transform 0.3s, background-color 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.portfolio-link:hover {
+  color: #ffdd57;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.credit {
+  font-size: 14px;
+  margin-top: 20px;
+  background-color: rgba(255, 221, 87, 0.9);
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 15px;
+  display: inline-block;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.image {
+  width: 50px;
+  vertical-align: middle;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px 0;
+  }
+
+  .connect-title {
+    font-size: 18px;
+  }
+
+  .credit {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 300px) {
+  .image {
+    width: 30px;
+  }
+}
 @media (max-width: 450px) {
   #notesarea {
     width: 95%;
